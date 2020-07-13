@@ -1,3 +1,4 @@
+这里所说的promise是符合promise/A+规范的promise
 ```
 class Ywxpromise{
   constructor(fn) {
@@ -25,7 +26,6 @@ class Ywxpromise{
     let promise2; { //then返回一个promise对象才能形成链式调用
     if(this.state === 'fulfilled'){
       promise2 = newYwxpromise((resolve, reject){
-      //怎么是放在这里的？
         let x = onFulfilled(this.value);//在自定义的成功回调函数中传入resolve成功后的值，失败同理
         resolvePromise(promise2, x, resolve, reject);
       })
@@ -71,7 +71,7 @@ resolvePromise(promise2, x, resolve, reject){
           //成功回调,就是onFulfilled
           if(called) return;
           called = true;
-          resolvePromise(promise2, y, resolve, reject) //y就相当于onFulfilled里传的值，就是外层promise返回的值？？？
+          resolvePromise(promise2, y, resolve, reject) //y就相当于onFulfilled里传的值，就是外层promise返回的值
         },err => {
           if(called) return;
           called = true;

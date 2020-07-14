@@ -1,4 +1,7 @@
 这里所说的promise是符合promise/A+规范的promise
+### promise/A+规范链接
+1. https://promisesaplus.com/
+2. https://segmentfault.com/a/1190000018589798
 ```
 class Ywxpromise{
   constructor(fn) {

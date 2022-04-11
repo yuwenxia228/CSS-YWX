@@ -46,3 +46,6 @@ Function.prototype.bind2 = function (context) {
   }
 }
 ```
+参考链接：  
+https://github.com/mqyqingfeng/Blog/issues/11  
+https://github.com/mqyqingfeng/Blog/issues/12
